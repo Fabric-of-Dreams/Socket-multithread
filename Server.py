@@ -47,8 +47,8 @@ def accepting_connections():
     for c in all_connections:
         c.close()
 
-    del all_connections[:]  # Будет работать без скобок? TODO
-    del all_addresses[:]
+    all_connections.clear()
+    all_addresses.clear()
 
     while True:
         try:
